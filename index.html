@@ -664,19 +664,24 @@
     window.addEventListener('scroll', reveal);
     window.addEventListener('load', reveal);
 
-     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (isMobile) {
+    <script>
+  (function() {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isAlreadyMobilePage = window.location.pathname.includes("/movil/");
+
+    if (isMobile && !isAlreadyMobilePage) {
       window.location.href = "https://aliceexploits.github.io/movil/";
     }
+  })();
+</script>
 
-
-  
 
   </script>
 </body>
 
 
 </html>
+
 
 
 
